@@ -1,6 +1,8 @@
 # Life Skill Stats
 Stats of my selected skills in life.
 
+---
+
 ## Run Project
 
 ```sh

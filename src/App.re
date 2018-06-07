@@ -9,6 +9,8 @@ let make = (_children) => {
         <h1 style=(Styles.name)>{ReasonReact.string("John Paul Ada")}</h1>
         <h2 style=(Styles.skillsLabel)>{ReasonReact.string("SKILLS")}</h2>
         <button style=(Styles.addSkill)>{ReasonReact.string("Add Skill")}</button>
+        <Skill name={"PROGRAMMING"} points={123} />
+        <Skill name={"MUSIC"} points={10} />
       </div>
     </div>,
 };

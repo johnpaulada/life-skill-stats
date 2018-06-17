@@ -1,6 +1,8 @@
 /* This is the basic component. */
 let component = ReasonReact.statelessComponent("Skill");
 
+let computeLevel = points : int => points / 5;
+
 let make = (~name: string, ~points: int, _children) => {
     ...component,
     render: _self =>
@@ -17,7 +19,7 @@ let make = (~name: string, ~points: int, _children) => {
             <div style=(Styles.skillActionsContainer)>
                 <button style=(Styles.addSkillButton)>{ReasonReact.string("Add")}</button>
                 <span style=(Styles.skillLevel)>
-                    {ReasonReact.string("lvl " ++ string_of_int(10))}
+                    {ReasonReact.string("lvl " ++ string_of_int(computeLevel(points)))}
                 </span>
             </div>
         </div>,

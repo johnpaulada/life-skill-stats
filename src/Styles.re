@@ -88,3 +88,48 @@ let skillPoints = ReactDOMRe.Style.make(
     ~opacity="0.5",
     ()
 );
+
+let skillProgressContainer = ReactDOMRe.Style.make(
+    ~padding="30px",
+    ~display="flex",
+    ~alignItems="center",
+    ()
+);
+
+let skillProgress = ReactDOMRe.Style.make(
+    ~backgroundColor="#E27F85",
+    ~border="none",
+    ~borderRadius="15px",
+    ~width="100%",
+    ~height="30px",
+    ()
+);
+
+let skillActionsContainer = ReactDOMRe.Style.make(
+    ~display="flex",
+    ~justifyContent="flex-end",
+    ~alignItems="center",
+    ~paddingRight="30px",
+    ()
+);
+
+let addSkillButton = ReactDOMRe.Style.make(
+    ~border="none",
+    ~backgroundColor="transparent",
+    ~fontFamily="Nunito Sans, sans-serif",
+    ~color="#FAFAFA",
+    ~cursor="pointer",
+    ~letterSpacing="2px",
+    ~textDecoration="underline",
+    ()
+);
+
+let skillLevel = ReactDOMRe.Style.make(
+    ~fontFamily="Nunito Sans, sans-serif",
+    ~fontWeight="100",
+    ~fontSize="24px",
+    ~letterSpacing="2px",
+    ~color="#FAFAFA",
+    ~opacity="0.5",
+    ()
+);

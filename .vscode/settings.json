@@ -1,6 +1,7 @@
 {
-    "editor.tabSize": 2,
+    "editor.tabSize": 4,
     "editor.formatOnSave": false,
     "prettier.useTabs": false,
-    "prettier.semi": true
+    "prettier.semi": true,
+    "prettier.tabWidth": 4
 }

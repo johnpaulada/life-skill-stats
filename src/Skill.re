@@ -1,6 +1,4 @@
-/* This is the basic component. */
 let component = ReasonReact.statelessComponent("Skill");
-
 let computeLevel = (points : int) : string => string_of_int(points / 5);
 let computeProgress = (points : int) : string => string_of_int(points mod 5);
 

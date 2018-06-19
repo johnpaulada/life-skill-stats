@@ -2,11 +2,11 @@ let component = ReasonReact.statelessComponent("Skill");
 let computeLevel = (points : int) : string => string_of_int(points / 5);
 let computeProgress = (points : int) : string => string_of_int(points mod 5);
 
-let make = (~name: string, ~points: int, _children) => {
+let make = (~onSkillClick, ~name: string, ~points: int, _children) => {
     ...component,
     render: _self =>
         <div style=(Styles.skillContainer)>
-            <h3 style=(Styles.skillTitle)>
+            <h3 onClick=onSkillClick style=(Styles.skillTitle)>
                 {ReasonReact.string(name)}
             </h3>
             <span style=(Styles.skillPoints)>

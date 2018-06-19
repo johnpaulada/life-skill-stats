@@ -1,6 +1,7 @@
 type route =
     | Home
-    | Skill
+    | Skill(string)
+    | AddSkill
 ;
 
 type state = {
@@ -19,12 +20,17 @@ let reducer = (action, _state) =>
 let mapUrlToRoute = (url: ReasonReact.Router.url) =>
     switch url.path {
         | [] => Home
-        | ["skill"] => Skill
+        | ["skill", id] => Skill(id)
+        | ["add_skill"] => AddSkill
         | _ => Home
 };
 
-let onSkillClick = (_event) => {
-    ReasonReact.Router.push("skill");
+let onSkillClick = id => (_event) => {
+    ReasonReact.Router.push("skill/" ++ id);
+};
+
+let onAddSkill = (_event) => {
+    ReasonReact.Router.push("add_skill");
 };
 
 let component = ReasonReact.reducerComponent("App");
@@ -35,13 +41,14 @@ let make = (_children) => {
     reducer,
     render: self => {
         switch self.state.route {
-            | Home => <Home onAddSkill=onSkillClick />
-            | Skill => <Activities />
+            | Home => <Home onAddSkill=onAddSkill onSkillClick=onSkillClick />
+            | Skill(id) => <Activities id=id />
+            | AddSkill => <AddSkill />
         };
     },
     subscriptions: (self) => [
         Sub(
-            () => ReasonReact.Router.watchUrl((url) => self.send(ChangeRoute(url |> mapUrlToRoute))),
+            () => ReasonReact.Router.watchUrl(url => ChangeRoute(url |> mapUrlToRoute) |> self.send),
             ReasonReact.Router.unwatchUrl
         )
     ],

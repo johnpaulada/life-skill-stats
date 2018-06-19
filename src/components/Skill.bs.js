@@ -15,7 +15,7 @@ function computeProgress(points) {
   return String(points % 5);
 }
 
-function make(name, points, _) {
+function make(onSkillClick, name, points, _) {
   return /* record */[
           /* debugName */component[/* debugName */0],
           /* reactClassInternal */component[/* reactClassInternal */1],
@@ -30,7 +30,8 @@ function make(name, points, _) {
               return React.createElement("div", {
                           style: Styles$ReactTemplate.skillContainer
                         }, React.createElement("h3", {
-                              style: Styles$ReactTemplate.skillTitle
+                              style: Styles$ReactTemplate.skillTitle,
+                              onClick: onSkillClick
                             }, name), React.createElement("span", {
                               style: Styles$ReactTemplate.skillPoints
                             }, String(points) + " pts."), React.createElement("div", {

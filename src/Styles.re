@@ -74,6 +74,7 @@ let skillTitle = ReactDOMRe.Style.make(
     ~margin="0",
     ~marginLeft="30px",
     ~marginTop="30px",
+    ~cursor="pointer",
     ()
 );
 

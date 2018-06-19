@@ -15,7 +15,7 @@ var component = ReasonReact.statelessComponent("Home");
 
 var Graphql_error = Caml_exceptions.create("Home-ReactTemplate.AllSkills.Graphql_error");
 
-var ppx_printed_query = "query AllSkills  {\nallSkills  {\nname  \n_activitiesMeta  {\ncount  \n}\n}\n}";
+var ppx_printed_query = "query AllSkills  {\nallSkills  {\nid  \nname  \n_activitiesMeta  {\ncount  \n}\n}\n}";
 
 function parse(value) {
   var match = Js_json.decodeObject(value);
@@ -28,7 +28,7 @@ function parse(value) {
               var match = Js_json.decodeObject(value);
               if (match) {
                 var value$1 = match[0];
-                var value$2 = value$1["name"];
+                var value$2 = value$1["id"];
                 var match$1 = Js_json.decodeString(value$2);
                 var tmp;
                 if (match$1) {
@@ -36,27 +36,36 @@ function parse(value) {
                 } else {
                   throw Graphql_error;
                 }
-                var value$3 = value$1["_activitiesMeta"];
-                var match$2 = Js_json.decodeObject(value$3);
+                var value$3 = value$1["name"];
+                var match$2 = Js_json.decodeString(value$3);
                 var tmp$1;
                 if (match$2) {
-                  var value$4 = match$2[0]["count"];
-                  var match$3 = Js_json.decodeNumber(value$4);
-                  var tmp$2;
-                  if (match$3) {
-                    tmp$2 = match$3[0] | 0;
+                  tmp$1 = match$2[0];
+                } else {
+                  throw Graphql_error;
+                }
+                var value$4 = value$1["_activitiesMeta"];
+                var match$3 = Js_json.decodeObject(value$4);
+                var tmp$2;
+                if (match$3) {
+                  var value$5 = match$3[0]["count"];
+                  var match$4 = Js_json.decodeNumber(value$5);
+                  var tmp$3;
+                  if (match$4) {
+                    tmp$3 = match$4[0] | 0;
                   } else {
                     throw Graphql_error;
                   }
-                  tmp$1 = {
-                    count: tmp$2
+                  tmp$2 = {
+                    count: tmp$3
                   };
                 } else {
                   throw Graphql_error;
                 }
                 return {
-                        name: tmp,
-                        _activitiesMeta: tmp$1
+                        id: tmp,
+                        name: tmp$1,
+                        _activitiesMeta: tmp$2
                       };
               } else {
                 throw Graphql_error;
@@ -111,7 +120,7 @@ var AllSkillsQuery = ReasonApollo.CreateQuery([
       parse
     ]);
 
-function make$1(onAddSkill, _) {
+function make$1(onAddSkill, onSkillClick, _) {
   return /* record */[
           /* debugName */component[/* debugName */0],
           /* reactClassInternal */component[/* reactClassInternal */1],
@@ -138,7 +147,7 @@ function make$1(onAddSkill, _) {
                                   var tmp;
                                   tmp = typeof result === "number" ? React.createElement("div", undefined, "Loading") : (
                                       result.tag ? $$Array.map((function (skill) {
-                                                return ReasonReact.element(/* None */0, /* None */0, Skill$ReactTemplate.make(skill.name, skill._activitiesMeta.count, /* array */[]));
+                                                return ReasonReact.element(/* None */0, /* None */0, Skill$ReactTemplate.make(Curry._1(onSkillClick, skill.id), skill.name, skill._activitiesMeta.count, /* array */[]));
                                               }), result[0].allSkills) : React.createElement("div", undefined, result[0].message)
                                     );
                                   return React.createElement("div", {

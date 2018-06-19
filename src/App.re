@@ -20,26 +20,23 @@ let make = (_children) => {
     render: _self => {
         <AllSkillsQuery>
             ...(({result}) => {
-                switch result {
-                    | Loading => <div> (ReasonReact.string("Loading")) </div>
-                    | Error(error) => <div> (ReasonReact.string(error##message)) </div>
-                    | Data(response) => {
-                        
-                        <div style=(Styles.main)>
-                            <div style=(Styles.body)>
-                                <h1 style=(Styles.name)>{ReasonReact.string("John Paul Ada")}</h1>
-                                <h2 style=(Styles.skillsLabel)>{ReasonReact.string("SKILLS")}</h2>
-                                <button style=(Styles.addSkill)>{ReasonReact.string("Add Skill")}</button>
+                <div style=(Styles.main)>
+                    <div style=(Styles.body)>
+                        <h1 style=(Styles.name)>{ReasonReact.string("John Paul Ada")}</h1>
+                        <h2 style=(Styles.skillsLabel)>{ReasonReact.string("SKILLS")}</h2>
+                        <button style=(Styles.addSkill)>{ReasonReact.string("Add Skill")}</button>
+                        {switch result {
+                            | Loading => <div> (ReasonReact.string("Loading")) </div>
+                            | Error(error) => <div> (ReasonReact.string(error##message)) </div>
+                            | Data(response) => {
                                 {response##allSkills
                                     |> Array.map(skill => <Skill name={skill##name} points={skill##_activitiesMeta##count} />)
                                     |> ReasonReact.array}
-                            </div>
-                        </div>
-                    }  
-                }
+                            }  
+                        }}
+                    </div>
+                </div>
             })
-            
         </AllSkillsQuery>
-
     },  
 };

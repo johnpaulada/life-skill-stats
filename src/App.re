@@ -12,8 +12,7 @@ module AllSkills = [%graphql {|
       }
 |}]; 
   
- module AllSkillsQuery = ReasonApollo.CreateQuery(AllSkills);
-  
+module AllSkillsQuery = ReasonApollo.CreateQuery(AllSkills);
 
 let make = (_children) => {
     ...component,

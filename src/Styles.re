@@ -39,12 +39,33 @@ let activitiesTitle = ReactDOMRe.Style.make(
     ()
 );
 
+let addSkillContainer = ReactDOMRe.Style.make(
+    ~gridRow="2 / 3",
+    ~gridColumn="2 / 3",
+    ~gridGap="40px",
+    ~display="grid",
+    ~gridTemplateColumns="minmax(500px, 5fr) minmax(140px, 1fr)",
+    ~gridTemplateRows="100px 50px",
+    ()
+);
+
+
 let name = ReactDOMRe.Style.make(
     ~gridColumn="1 / 3",
     ~fontFamily="Titan One, sans-serif",
     ~fontSize="72px",
     ~color="#FAFAFA",
     ~letterSpacing="3px",
+    ()
+);
+
+let addSkillTitle = ReactDOMRe.Style.make(
+    ~gridColumn="1 / 3",
+    ~fontFamily="Titan One, sans-serif",
+    ~fontSize="72px",
+    ~color="#FAFAFA",
+    ~letterSpacing="3px",
+    ~margin="0",
     ()
 );
 
@@ -72,6 +93,7 @@ let addSkill = ReactDOMRe.Style.make(
     ~borderRadius="20px",
     ~marginTop="60px",
     ~marginBottom="0",
+    ~cursor="pointer",
     ()
 );
 

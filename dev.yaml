@@ -3,5 +3,6 @@ config:
 tasks:
     - name: Running Dev Serve
       parallel-tasks: 
+        - cmd: cp public/* build/
         - cmd: yarn webpack
         - cmd: serve build

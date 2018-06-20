@@ -29,7 +29,7 @@ let make = (~onAddSkill, ~onSkillClick, _children) => {
                             | Error(error) => <div> (ReasonReact.string(error##message)) </div>
                             | Data(response) => {
                                 {response##allSkills
-                                    |> Array.map(skill => <Skill onSkillClick=onSkillClick(skill##id) name={skill##name} points={skill##_activitiesMeta##count} />)
+                                    |> Array.map(skill => <Skill key={skill##id} onSkillClick=onSkillClick(skill##id) name={skill##name} points={skill##_activitiesMeta##count} />)
                                     |> ReasonReact.array}
                             }  
                         }}

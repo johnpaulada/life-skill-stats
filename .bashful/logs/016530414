@@ -1,0 +1,135 @@
+2018/06/20 17:18:21 [1;39mTask full output: yarn webpack[0m
+yarn run v1.7.0
+$ webpack -w
+
+Webpack is watching the files…
+
+Hash: 564da9440533dac5b996
+Version: webpack 4.8.3
+Time: 1569ms
+Built at: 06/20/2018 5:18:28 PM
+   Asset     Size  Chunks             Chunk Names
+Index.js  817 KiB    main  [emitted]  main
+Entrypoint main = Index.js
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 509 bytes {main} [built]
+[./node_modules/webpack/buildin/harmony-module.js] (webpack)/buildin/harmony-module.js 597 bytes {main} [built]
+[./src/App.bs.js] 3.59 KiB {main} [built]
+[./src/Client.bs.js] 853 bytes {main} [built]
+[./src/Index.bs.js] 682 bytes {main} [built]
+[./src/Styles.bs.js] 3.66 KiB {main} [built]
+    + 170 hidden modules
+
+ERROR in ./src/Index.bs.js
+Module not found: Error: Can't resolve 'reason-react/src/ReactDOMRe.js' in '/Users/johnpaulada/Projects/life-skill-stats/src'
+ @ ./src/Index.bs.js 4:17-58
+
+ERROR in ./node_modules/reason-apollo/src/ApolloProvider.bs.js
+Module not found: Error: Can't resolve 'reason-react/src/ReasonReact.js' in '/Users/johnpaulada/Projects/life-skill-stats/node_modules/reason-apollo/src'
+ @ ./node_modules/reason-apollo/src/ApolloProvider.bs.js 4:0-63 8:9-36
+ @ ./src/Index.bs.js
+
+ERROR in ./node_modules/reason-apollo/src/graphql-types/ReasonApolloQuery.bs.js
+Module not found: Error: Can't resolve 'reason-react/src/ReasonReact.js' in '/Users/johnpaulada/Projects/life-skill-stats/node_modules/reason-apollo/src/graphql-types'
+ @ ./node_modules/reason-apollo/src/graphql-types/ReasonApolloQuery.bs.js 8:0-69 77:11-38
+ @ ./node_modules/reason-apollo/src/ReasonApollo.bs.js
+ @ ./src/Client.bs.js
+ @ ./src/Index.bs.js
+
+ERROR in ./node_modules/reason-apollo/src/graphql-types/ReasonApolloMutation.bs.js
+Module not found: Error: Can't resolve 'reason-react/src/ReasonReact.js' in '/Users/johnpaulada/Projects/life-skill-stats/node_modules/reason-apollo/src/graphql-types'
+ @ ./node_modules/reason-apollo/src/graphql-types/ReasonApolloMutation.bs.js 6:0-69 72:11-38
+ @ ./node_modules/reason-apollo/src/ReasonApollo.bs.js
+ @ ./src/Client.bs.js
+ @ ./src/Index.bs.js
+
+ERROR in ./src/App.bs.js
+Module not found: Error: Can't resolve 'reason-react/src/ReasonReact.js' in '/Users/johnpaulada/Projects/life-skill-stats/src'
+ @ ./src/App.bs.js 6:18-60
+ @ ./src/Index.bs.js
+
+ERROR in ./src/Index.bs.js
+Module not found: Error: Can't resolve 'reason-react/src/ReasonReact.js' in '/Users/johnpaulada/Projects/life-skill-stats/src'
+ @ ./src/Index.bs.js 5:18-60
+
+ERROR in ./src/components/AddSkill.bs.js
+Module not found: Error: Can't resolve 'reason-react/src/ReasonReact.js' in '/Users/johnpaulada/Projects/life-skill-stats/src/components'
+ @ ./src/components/AddSkill.bs.js 5:18-60
+ @ ./src/App.bs.js
+ @ ./src/Index.bs.js
+
+ERROR in ./src/components/Home.bs.js
+Module not found: Error: Can't resolve 'reason-react/src/ReasonReact.js' in '/Users/johnpaulada/Projects/life-skill-stats/src/components'
+ @ ./src/components/Home.bs.js 8:18-60
+ @ ./src/App.bs.js
+ @ ./src/Index.bs.js
+
+ERROR in ./src/components/Activity.bs.js
+Module not found: Error: Can't resolve 'reason-react/src/ReasonReact.js' in '/Users/johnpaulada/Projects/life-skill-stats/src/components'
+ @ ./src/components/Activity.bs.js 5:18-60
+ @ ./src/components/Activities.bs.js
+ @ ./src/App.bs.js
+ @ ./src/Index.bs.js
+
+ERROR in ./src/components/Skill.bs.js
+Module not found: Error: Can't resolve 'reason-react/src/ReasonReact.js' in '/Users/johnpaulada/Projects/life-skill-stats/src/components'
+ @ ./src/components/Skill.bs.js 5:18-60
+ @ ./src/components/Home.bs.js
+ @ ./src/App.bs.js
+ @ ./src/Index.bs.js
+
+ERROR in ./src/components/Activities.bs.js
+Module not found: Error: Can't resolve 'reason-react/src/ReasonReact.js' in '/Users/johnpaulada/Projects/life-skill-stats/src/components'
+ @ ./src/components/Activities.bs.js 10:18-60
+ @ ./src/App.bs.js
+ @ ./src/Index.bs.js
+Hash: fd8a86fd43f138269b47
+Version: webpack 4.8.3
+Time: 790ms
+Built at: 06/20/2018 5:19:35 PM
+   Asset      Size  Chunks             Chunk Names
+Index.js  1.46 MiB    main  [emitted]  main
+Entrypoint main = Index.js
+   190 modules
+Hash: 19c5428bf5ccfa770795
+Version: webpack 4.8.3
+Time: 144ms
+Built at: 06/20/2018 5:19:35 PM
+   Asset      Size  Chunks             Chunk Names
+Index.js  1.42 MiB    main  [emitted]  main
+Entrypoint main = Index.js
+[./src/Client.bs.js] 853 bytes {main} [built]
+[./src/Index.bs.js] 682 bytes {main} [built]
+    + 182 hidden modules
+Hash: 4556e867d91fd57ebf5b
+Version: webpack 4.8.3
+Time: 140ms
+Built at: 06/20/2018 5:20:13 PM
+   Asset      Size  Chunks             Chunk Names
+Index.js  1.42 MiB    main  [emitted]  main
+Entrypoint main = Index.js
+[./src/App.bs.js] 3.59 KiB {main} [built]
+[./src/Client.bs.js] 953 bytes {main} [built]
+[./src/Index.bs.js] 682 bytes {main} [built]
+    + 182 hidden modules
+
+ERROR in ./node_modules/@ahrefs/bs-dotenv/src/dotenv.bs.js
+Module not found: Error: Can't resolve 'dotenv' in '/Users/johnpaulada/Projects/life-skill-stats/node_modules/@ahrefs/bs-dotenv/src'
+ @ ./node_modules/@ahrefs/bs-dotenv/src/dotenv.bs.js 4:13-30
+ @ ./src/Client.bs.js
+ @ ./src/Index.bs.js
+Hash: d5e93b97b3f2b773c0c6
+Version: webpack 4.8.3
+Time: 79ms
+Built at: 06/20/2018 5:20:29 PM
+   Asset      Size  Chunks             Chunk Names
+Index.js  1.42 MiB    main  [emitted]  main
+Entrypoint main = Index.js
+[./src/Client.bs.js] 1010 bytes {main} [built]
+[./src/Index.bs.js] 682 bytes {main} [built]
+    + 183 hidden modules
+
+ERROR in ./node_modules/@ahrefs/bs-dotenv/src/dotenv.bs.js
+Module not found: Error: Can't resolve 'dotenv' in '/Users/johnpaulada/Projects/life-skill-stats/node_modules/@ahrefs/bs-dotenv/src'
+ @ ./node_modules/@ahrefs/bs-dotenv/src/dotenv.bs.js 4:13-30
+ @ ./src/Client.bs.js
+ @ ./src/Index.bs.js

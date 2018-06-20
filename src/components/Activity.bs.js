@@ -3,10 +3,11 @@
 
 var React = require("react");
 var ReasonReact = require("reason-react/src/ReasonReact.js");
+var Styles$ReactTemplate = require("../Styles.bs.js");
 
-var component = ReasonReact.statelessComponent("AddSkill");
+var component = ReasonReact.statelessComponent("Activity");
 
-function make() {
+function make(description, _) {
   return /* record */[
           /* debugName */component[/* debugName */0],
           /* reactClassInternal */component[/* reactClassInternal */1],
@@ -18,7 +19,11 @@ function make() {
           /* willUpdate */component[/* willUpdate */7],
           /* shouldUpdate */component[/* shouldUpdate */8],
           /* render */(function () {
-              return React.createElement("div", undefined, "Add Skill");
+              return React.createElement("div", {
+                          style: Styles$ReactTemplate.activityContainer
+                        }, React.createElement("p", {
+                              style: Styles$ReactTemplate.activitiesDescription
+                            }, description));
             }),
           /* initialState */component[/* initialState */10],
           /* retainedProps */component[/* retainedProps */11],

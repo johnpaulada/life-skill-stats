@@ -15,7 +15,7 @@ type action =
 let reducer = (action, _state) =>
     switch action {
         | ChangeRoute(route) => ReasonReact.Update({route: route})
-};
+    };
 
 let mapUrlToRoute = (url: ReasonReact.Router.url) =>
     switch url.path {

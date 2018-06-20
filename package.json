@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack": "webpack -w",
     "webpack:production": "NODE_ENV=production webpack",
-    "serve": "npm run build && npm run webpack:production && cd build && serve"
+    "deploy": "npm run build && npm run webpack:production && surge --domain https://jpa-life-skills.surge.sh --project build"
   },
   "keywords": [
     "BuckleScript"
@@ -22,6 +22,7 @@
     "apollo-link-context": "^1.0.8",
     "apollo-link-error": "^1.1.0",
     "apollo-link-http": "^1.5.4",
+    "dotenv": "^6.0.0",
     "graphql": "^0.13.2",
     "graphql-tag": "^2.9.2",
     "react": "^16.2.0",
@@ -31,7 +32,6 @@
     "reason-react": ">=0.3.4"
   },
   "devDependencies": {
-    "bs-platform": "^3.0.0",
     "graphql_ppx": "^0.2.3",
     "webpack": "^4.0.1",
     "webpack-cli": "^2.0.10"

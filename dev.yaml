@@ -1,0 +1,7 @@
+config:
+  show-failure-report: true
+tasks:
+    - name: Running Dev Serve
+      parallel-tasks: 
+        - cmd: yarn webpack
+        - cmd: serve build

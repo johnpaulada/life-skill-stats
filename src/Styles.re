@@ -20,6 +20,25 @@ let body = ReactDOMRe.Style.make(
     ()
 );
 
+let activitiesContainer = ReactDOMRe.Style.make(
+    ~gridRow="2 / 3",
+    ~gridColumn="2 / 3",
+    ~gridGap="40px",
+    ~display="grid",
+    ~gridTemplateColumns="1fr",
+    ~gridAutoRows="100px",
+    ()
+);
+
+let activitiesTitle = ReactDOMRe.Style.make(
+    ~fontFamily="Titan One, sans-serif",
+    ~fontSize="64px",
+    ~color="#FAFAFA",
+    ~letterSpacing="3px",
+    ~margin="0",
+    ()
+);
+
 let name = ReactDOMRe.Style.make(
     ~gridColumn="1 / 3",
     ~fontFamily="Titan One, sans-serif",
@@ -65,6 +84,22 @@ let skillContainer = ReactDOMRe.Style.make(
     ()
 );
 
+let activityContainer = ReactDOMRe.Style.make(
+    ~backgroundColor="#FAFAFA",
+    ~borderRadius="20px",
+    ~display="flex",
+    ~justifyContent="center",
+    ~alignItems="center",
+    ()
+);
+
+let activitiesDescription = ReactDOMRe.Style.make(
+    ~color="#2E2C3D",
+    ~fontSize="24px",
+    ~fontFamily="Nunito Sans, sans-serif",
+    ()
+)
+
 let skillTitle = ReactDOMRe.Style.make(
     ~color="#FAFAFA",
     ~fontFamily="Nunito Sans, sans-serif",
@@ -75,6 +110,7 @@ let skillTitle = ReactDOMRe.Style.make(
     ~marginLeft="30px",
     ~marginTop="30px",
     ~cursor="pointer",
+    ~textDecoration="underline",
     ()
 );
 

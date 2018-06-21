@@ -26,6 +26,7 @@ let activitiesContainer = ReactDOMRe.Style.make(
     ~gridGap="40px",
     ~display="grid",
     ~gridTemplateColumns="1fr",
+    ~gridTemplateRows="100px 50px",
     ~gridAutoRows="100px",
     ()
 );
@@ -49,6 +50,12 @@ let addSkillContainer = ReactDOMRe.Style.make(
     ()
 );
 
+let addActivityFormContainer = ReactDOMRe.Style.make(
+    ~display="grid",
+    ~gridTemplateColumns="3fr 1fr",
+    ~gridGap="20px",
+    ()
+);
 
 let name = ReactDOMRe.Style.make(
     ~gridColumn="1 / 3",
@@ -66,6 +73,25 @@ let addSkillTitle = ReactDOMRe.Style.make(
     ~color="#FAFAFA",
     ~letterSpacing="3px",
     ~margin="0",
+    ()
+);
+
+let addSkillFormButton = ReactDOMRe.Style.make(
+    ~border="none",
+    ~borderRadius="25px",
+    ~backgroundColor="#E27F85",
+    ~fontFamily="Nunito Sans, sans-serif",
+    ~color="#FAFAFA",
+    ~cursor="pointer",
+    ~letterSpacing="2px",
+    ()
+);
+
+let addSkillFormInput = ReactDOMRe.Style.make(
+    ~border="none",
+    ~borderRadius="10px",
+    ~fontFamily="Nunito Sans, sans-serif",
+    ~padding="10px",
     ()
 );
 

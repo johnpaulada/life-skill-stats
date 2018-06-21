@@ -209,7 +209,15 @@ function make$1(id, _) {
                                           style: Styles$ReactTemplate.activitiesContainer
                                         }, React.createElement("h1", {
                                               style: Styles$ReactTemplate.activitiesTitle
-                                            }, getSkillName(response)), $$Array.map((function (activity) {
+                                            }, getSkillName(response)), React.createElement("div", {
+                                              style: Styles$ReactTemplate.addActivityFormContainer
+                                            }, React.createElement("input", {
+                                                  style: Styles$ReactTemplate.addSkillFormInput,
+                                                  placeholder: "Activity Description, e.g. Sleepwalked barefoot at 3 AM...",
+                                                  type: "text"
+                                                }), React.createElement("button", {
+                                                  style: Styles$ReactTemplate.addSkillFormButton
+                                                }, "Add")), $$Array.map((function (activity) {
                                                 return ReasonReact.element(/* Some */[activity.id], /* None */0, Activity$ReactTemplate.make(activity.description, /* array */[]));
                                               }), response.allActivities));
                                   } else {

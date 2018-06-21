@@ -177,12 +177,15 @@ function make$1() {
                                               }, React.createElement("h1", {
                                                     style: Styles$ReactTemplate.addSkillTitle
                                                   }, "Add Skill"), React.createElement("input", {
+                                                    style: Styles$ReactTemplate.addSkillFormInput,
+                                                    placeholder: "Skill Name, e.g. Somnabulism...",
                                                     type: "text",
                                                     onChange: (function (evt) {
                                                         var value = evt.target.value;
                                                         return Curry._1(self[/* send */3], /* ChangeName */[value]);
                                                       })
                                                   }), React.createElement("button", {
+                                                    style: Styles$ReactTemplate.addSkillFormButton,
                                                     onClick: (function () {
                                                         Curry._3(mutation, /* Some */[addSkill.variables], /* Some */[/* array */["AllSkills"]], /* () */0);
                                                         return ReasonReact.Router[/* push */0]("/");

@@ -39,13 +39,13 @@ let make = (_children) => {
                 <div style=Styles.main>
                     <div style=Styles.addSkillContainer>
                         <h1 style={Styles.addSkillTitle}>{ReasonReact.string("Add Skill")}</h1>
-                        <input _type="text" onChange=(
+                        <input _type="text" style=(Styles.addSkillFormInput) placeholder="Skill Name, e.g. Somnabulism..." onChange=(
                             evt => {
                                 let value = ReactDOMRe.domElementToObj(ReactEventRe.Form.target(evt))##value;
                                 self.send(ChangeName(value))
                             }
                         ) />
-                        <button onClick=((_mouseEvent) => {
+                        <button style={Styles.addSkillFormButton} onClick=((_mouseEvent) => {
                             mutation(
                                 ~variables=addSkill##variables,
                                 ~refetchQueries=[|"AllSkills"|],

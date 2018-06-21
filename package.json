@@ -23,6 +23,7 @@
     "apollo-link-error": "^1.1.0",
     "apollo-link-http": "^1.5.4",
     "dotenv": "^6.0.0",
+    "dotenv-webpack": "^1.5.7",
     "graphql": "^0.13.2",
     "graphql-tag": "^2.9.2",
     "react": "^16.2.0",

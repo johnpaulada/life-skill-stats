@@ -17,3 +17,9 @@ Stats of my selected skills in life.
 3. Install [Serve](https://www.npmjs.com/package/serve).
 4. Install [bashful](https://github.com/wagoodman/bashful).
 5. Run `bashful run dev.yaml` to run the dev server.
+
+## Stack
+1. [ReasonML](https://reasonml.github.io/)
+2. [ReasonReact](https://reasonml.github.io/reason-react/en/)
+3. [reason-apollo](https://github.com/apollographql/reason-apollo)
+4. [GraphCool](https://www.graph.cool/)

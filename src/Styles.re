@@ -138,6 +138,7 @@ let activityContainer = ReactDOMRe.Style.make(
     ~display="flex",
     ~justifyContent="center",
     ~alignItems="center",
+    ~padding="20px",
     ()
 );
 

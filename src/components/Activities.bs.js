@@ -12,6 +12,7 @@ var ReasonApollo = require("reason-apollo/src/ReasonApollo.bs.js");
 var Caml_exceptions = require("bs-platform/lib/js/caml_exceptions.js");
 var Styles$ReactTemplate = require("../Styles.bs.js");
 var Activity$ReactTemplate = require("./Activity.bs.js");
+var ActivityForm$ReactTemplate = require("./ActivityForm.bs.js");
 
 var component = ReasonReact.statelessComponent("Activities");
 
@@ -209,15 +210,7 @@ function make$1(id, _) {
                                           style: Styles$ReactTemplate.activitiesContainer
                                         }, React.createElement("h1", {
                                               style: Styles$ReactTemplate.activitiesTitle
-                                            }, getSkillName(response)), React.createElement("div", {
-                                              style: Styles$ReactTemplate.addActivityFormContainer
-                                            }, React.createElement("input", {
-                                                  style: Styles$ReactTemplate.addSkillFormInput,
-                                                  placeholder: "Activity Description, e.g. Sleepwalked barefoot at 3 AM...",
-                                                  type: "text"
-                                                }), React.createElement("button", {
-                                                  style: Styles$ReactTemplate.addSkillFormButton
-                                                }, "Add")), $$Array.map((function (activity) {
+                                            }, getSkillName(response)), ReasonReact.element(/* None */0, /* None */0, ActivityForm$ReactTemplate.make(id, /* array */[])), $$Array.map((function (activity) {
                                                 return ReasonReact.element(/* Some */[activity.id], /* None */0, Activity$ReactTemplate.make(activity.description, /* array */[]));
                                               }), response.allActivities));
                                   } else {

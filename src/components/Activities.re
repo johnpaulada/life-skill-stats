@@ -40,10 +40,7 @@ let make = (~id, _children) => {
                         | Data(response) => {
                             <div style=Styles.activitiesContainer>
                                 <h1 style={Styles.activitiesTitle}>(ReasonReact.string(getSkillName(response)))</h1>
-                                <div style=(Styles.addActivityFormContainer)>
-                                    <input style=(Styles.addSkillFormInput) _type="text" placeholder="Activity Description, e.g. Sleepwalked barefoot at 3 AM..." />
-                                    <button style=(Styles.addSkillFormButton)>{ReasonReact.string("Add")}</button>
-                                </div>
+                                <ActivityForm skillId=id />
                                 {response##allActivities
                                     |> Array.map(activity => <Activity key=activity##id description=activity##description />)
                                     |> ReasonReact.array}

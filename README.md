@@ -16,7 +16,8 @@ Stats of my selected skills in life.
 2. Run `yarn` to install dependencies.
 3. Install [Serve](https://www.npmjs.com/package/serve).
 4. Install [bashful](https://github.com/wagoodman/bashful).
-5. Run `bashful run dev.yaml` to run the dev server.
+5. Run `yarn start` on the Terminal.
+5. Run `bashful run dev.yaml` on another Terminal tab to run the dev server.
 
 ## Stack
 1. [ReasonML](https://reasonml.github.io/)

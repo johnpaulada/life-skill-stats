@@ -3,5 +3,3 @@ ReactDOMRe.renderToElementWithId(
         <App />
     </ReasonApollo.Provider>,
 "root");
-
-ReasonReact.Router.push("");

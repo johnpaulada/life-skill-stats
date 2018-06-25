@@ -25,7 +25,7 @@ let mapUrlToRoute = (url: ReasonReact.Router.url) =>
         | _ => Home
 };
 
-let onSkillClick = id => (_event) => {
+let onSkillClick = (id, _event) => {
     ReasonReact.Router.push("skill/" ++ id);
 };
 
